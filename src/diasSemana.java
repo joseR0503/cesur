@@ -1,15 +1,29 @@
+import java.util.Scanner;
 
 public class diasSemana {
+	
 	
 	public static void main (String[] args) {
 		
 		int semana =0;
 	    int diaSemana=0; 
-	   int filas=0;
+	    int filas=0;
+	    Scanner teclado = new Scanner(System.in);
+	    int dias;
+
+	    int totalMeses;
+
+	    
+	    do { 
+	    	System.out.print("Introduce un numero: ");
+		    dias= teclado.nextInt();
+		    
+	    } while ( dias <1 || dias > 336);
+	    
+	    totalMeses= dias/28;	
 	   
-	   
-	   
-	   while (filas < 12) {
+	   while (filas < totalMeses) {
+		   
 		   
 		   switch(filas) {
 		   case 0:
