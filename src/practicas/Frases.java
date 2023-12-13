@@ -1,3 +1,4 @@
+package practicas;
 import java.util.Scanner;
 
 public class Frases {
@@ -36,6 +37,7 @@ public class Frases {
 
 	static void setValue(String[] cadenas, int posicion, String newCadena) {
 		cadenas[posicion] = newCadena;
+		
 	}
 
 	void setvalue(String[] cadenas, int posicion, String newCadena) {

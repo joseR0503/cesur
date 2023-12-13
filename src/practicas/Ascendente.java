@@ -1,4 +1,4 @@
-package learningJava;
+package practicas;
 
 import java.util.Scanner;
 

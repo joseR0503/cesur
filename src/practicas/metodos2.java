@@ -1,4 +1,4 @@
-package learningJava;
+package practicas;
 
 import java.util.Scanner;
 
@@ -66,6 +66,15 @@ public class metodos2 {
 		
 		}
 
+	}
+	//5. pon a x todos los numeros del array.
+	static void reseteaNumeros(int x) {
+		
+		for (int i = 0; x < TOTALNUM; x++ ) {
+			arrayEnteros[x]=i;
+			
+		}
+		
 	}
 
 }
