@@ -11,7 +11,7 @@ public class AlumnoCesur {
 	public static void main(String[] args) {
 
 		Random aleatorio = new Random();
-		CentroEstudio cesurEste = new CentroEstudio("cesur El Palo", 5, 4);
+		CentroEstudio cesurEste = new CentroEstudio("cesur El Palo", 7, 4);
 		Clase claseTemp;
 		String nombreClaseTemp= Creator.newClase();
 		
