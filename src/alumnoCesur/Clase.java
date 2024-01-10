@@ -68,7 +68,7 @@ class Clase {
 	}
 
 	public void delete(String nombre) {
-		// solo hay un alumno con el mismo nombre.
+		// SOLO HAY UN ALUMNO CON EL MIMSO NOMBRE.
 		int indice = 0;
 		while ((alumnos[indice].getNombre() != nombre) && (indice < alumnos.length)) {
 			indice++;
@@ -80,11 +80,11 @@ class Clase {
 			}
 			alumnos[numAlumnos] = null;
 
-		} else { // recorrido array sin encontrar el objeto.
+		} else { // recorrido array sin encontrar el o.
 			System.out.println("El alumno [" + nombre + "] no se encuentra en la clase [" + nombreClase + "]");
 		}
 
-	} // fin delete
+	} // FIN DELETE 
 
 	public void delete(Alumno alumno) {
 		Alumno[] alumnosTemp = new Alumno[MAX_ALUMNOS];
