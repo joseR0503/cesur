@@ -9,6 +9,7 @@ public class Fibonacci {
 		int numAnt = 1;
 		int numActual = 1;
 		int temp=0;
+		
 		System.out.print(numAnt + " ");
 		System.out.print(numActual + " ");
 		while (contador<maxNumFib) {
