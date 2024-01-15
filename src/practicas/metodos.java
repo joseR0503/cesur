@@ -17,7 +17,7 @@ public class metodos {
 			max = teclado.nextInt();
 			System.out.println("Escribe el min");
 			min = teclado.nextInt();
-		} while (metodos.comprobarMaxMin(max, min ));
+		} while (metodos.comprobarMaxMin(max, min, valor));
 		do {
 			System.out.println("Escribe el valor");
 			valor = teclado.nextInt();
