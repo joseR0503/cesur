@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-01-2024 a las 11:35:10
+-- Tiempo de generación: 16-01-2024 a las 12:26:36
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -29,9 +29,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `conductor` (
   `dni` int(11) NOT NULL,
-  `permiso` int(11) DEFAULT NULL,
+  `permiso` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `conductor`
+--
+
+INSERT INTO `conductor` (`dni`, `permiso`, `nombre`) VALUES
+(0, 0, 'MARIA'),
+(1, 1, 'ANDRES'),
+(2, 2, 'FRAN'),
+(3, 3, 'SANTIAGO'),
+(4, 4, 'JOSE RAMON'),
+(5, 5, 'JOSE CARLOS');
 
 -- --------------------------------------------------------
 
@@ -44,6 +56,18 @@ CREATE TABLE `cond_perm` (
   `tipo_permiso` char(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `cond_perm`
+--
+
+INSERT INTO `cond_perm` (`conductor`, `tipo_permiso`) VALUES
+(1, 'A'),
+(1, 'B'),
+(2, 'B'),
+(3, 'A1'),
+(4, 'A2'),
+(5, 'B1');
+
 -- --------------------------------------------------------
 
 --
@@ -53,6 +77,18 @@ CREATE TABLE `cond_perm` (
 CREATE TABLE `tipo_permiso` (
   `tipo` char(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `tipo_permiso`
+--
+
+INSERT INTO `tipo_permiso` (`tipo`) VALUES
+('A'),
+('A1'),
+('A2'),
+('B'),
+('B1'),
+('B2');
 
 -- --------------------------------------------------------
 
@@ -67,6 +103,16 @@ CREATE TABLE `vehiculo` (
   `modelo` varchar(30) NOT NULL,
   `propietario` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `vehiculo`
+--
+
+INSERT INTO `vehiculo` (`matricula`, `bastidor`, `marca`, `modelo`, `propietario`) VALUES
+('1234abc', '1234abc', 'mercedes', 'benz', 1),
+('1234ABD', '2', 'FERRARI', 'ENZO', 1),
+('1235ABC', '4', 'SEAT', 'IBIZA', 4),
+('1634abc', '2234abc', 'seat', 'cupra', 2);
 
 --
 -- Índices para tablas volcadas
