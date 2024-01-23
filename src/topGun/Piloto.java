@@ -19,10 +19,10 @@ public class Piloto {
 	}
 
 	public void mostrarPiloto () {
-		System.out.println("La id de un piloto es " + idPiloto);
-		System.out.println("El nombre de un piloto es " + nomPiloto);
-		System.out.println("Las horas de vuelo de un piloto son " + horasVuelo);
-		System.out.println("El rango de un piloto es  " + rangoPiloto);
+		System.out.println("La id del piloto es: " + idPiloto);
+		System.out.println("El nombre del piloto es: " + nomPiloto);
+		System.out.println("Las horas de vuelo del piloto son: " + horasVuelo);
+		System.out.println("El rango del piloto es:  " + rangoPiloto);
 		
 	}
 		//GETTER Y SETTER
