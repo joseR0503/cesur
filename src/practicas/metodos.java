@@ -8,7 +8,7 @@ public class metodos {
 
 		Scanner teclado = new Scanner(System.in);
 
-		int valor;
+		int valor = 0;
 		int min;
 		int max;
 
