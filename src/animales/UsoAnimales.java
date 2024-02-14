@@ -1,32 +1,27 @@
 package animales;
+import java.util.Random;
 
 public class UsoAnimales {
 
 	public static void main(String[] args) {
-		mamiferos perro = new mamiferos("perro", 15, true);
-		Insecto hormiga = new Insecto("hormiga", 1, false, true, "oso hormiguero");
-		System.out.println("El animal: " + hormiga.getNombre() + " tiene alas?: " + hormiga.isAlas());
-		System.out.println(hormiga.getNombre() + " tiene de enemigo a: " + hormiga.getEnemigo().getNombre());
-
-		Insecto atomica;
-		Insecto volantona;
-		volantona = hormiga;
-		atomica = new Insecto(hormiga.getNombre() + " atomica", hormiga.getTpoVida(), hormiga.isAlas(),
-				hormiga.isAntenas(), hormiga.getEnemigo().getNombre()
-
-		);
+    //  CREAR UN ARRAY DE 10 ENTEROS QUE SE LLAME ENTEROS
+		Random aleatorio = new Random();
+		int[] enteros;
+		enteros = new int[10];
+		for (int i=0; i<enteros.length; i++) {
+			enteros[i]= aleatorio.nextInt(10);
+		}
 		
+		int numero = aleatorio.nextInt(10);
+		boolean encontrado = false;
+		for (int i=0; i<enteros.length; i++) {
+			if (enteros[i] == numero) {
+				encontrado = true;
+			}
+		}
 		
-		hormiga.setAlas(true);
-		volantona.setNombre("volantona");
-		System.out.println(hormiga.getNombre() + " tiene alas?: " + hormiga.isAlas());
-		System.out.println(atomica.getNombre() + "tiene alass?: " + atomica.isAlas());
-		System.out.println(volantona.getNombre() + " tiene alas?: " + volantona.isAlas());  
+		System.out.println("Encontrado "+ numero+":" + encontrado);
 		
-		
-        volantona.setNombre(atomica.getNombre());
-		
-		System.out.println();
 
 	}
 

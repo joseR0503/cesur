@@ -1,9 +1,9 @@
 package animales;
 
-public class mamiferos extends Animal {
+public class Mamifero extends Animal {
 	private boolean velloCorporal;
 
-	public mamiferos(String nombre, int tpoVida, boolean velloCorporal) {
+	public Mamifero(String nombre, int tpoVida, boolean velloCorporal) {
 		super(nombre, tpoVida);
 		this.velloCorporal = velloCorporal;
 	}
