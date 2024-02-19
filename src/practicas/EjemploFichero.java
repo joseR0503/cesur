@@ -66,23 +66,30 @@ public class EjemploFichero {
 			}
 		}
 		
-		System.out.println("introduce una frase");
+
 		Scanner teclado = new Scanner(System.in);
-		String fraseTeclado= teclado.nextLine();
-		char[] fraseA = new char[fraseTeclado.length()];
-		for (int i=0; i<fraseTeclado.length(); i++) {
-			fraseA[i]=fraseTeclado.charAt(i);
-			
-		}
+		String fraseTeclado;
+		
 		
 		FileOutputStream exit = null;
 		
 		try {
 			exit = new FileOutputStream("pruebaFichero.txt",true);
-			for (int i=0; i<fraseA.length; i++) {
-				exit.write(fraseA[i]);
-			}
-			exit.write('\n');
+			
+			do {
+				System.out.println("introduce una frase");
+				fraseTeclado = teclado.nextLine();
+				char[] fraseA = new char[fraseTeclado.length()];
+				for (int i = 0; i < fraseTeclado.length(); i++) {
+					fraseA[i] = fraseTeclado.charAt(i);
+
+				}
+				for (int i = 0; i < fraseA.length; i++) {
+					exit.write(fraseA[i]);
+				}
+				exit.write('\n');
+			} while (fraseTeclado.charAt(0)!='Q' && fraseTeclado.length()>1);
+			
 		} catch (FileNotFoundException e) {
 			System.out.println(e.getMessage());
 			
